@@ -15,6 +15,8 @@
     "vite": "^6.0.7"
   },
   "dependencies": {
-    "gsap": "^3.12.5"
+    "aos": "^2.3.4",
+    "gsap": "^3.12.5",
+    "simple-parallax-js": "^6.0.1"
   }
 }

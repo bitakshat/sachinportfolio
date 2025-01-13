@@ -1,19 +1,61 @@
-import gsap from 'gsap';
 
-// gsap.from('.header-link', {
-//     duration: 1,
-//     opacity: 0,
-//     y: -50,
-//     stagger: 0.2
-// });
+document.addEventListener("DOMContentLoaded", () => {
+    // Create the circle element
+    const cursorCircle = document.createElement("div");
+    cursorCircle.style.position = "fixed";
+    cursorCircle.style.width = "100px";
+    cursorCircle.style.height = "100px";
+    cursorCircle.style.border = "2px solid rgba(135, 135, 135, 0.2)";
+    cursorCircle.style.borderRadius = "50%";
+    cursorCircle.style.pointerEvents = "none";
+    // cursorCircle.style.transition = "background-color 0.3s ease";
+    cursorCircle.style.zIndex = "1000";
+    document.body.appendChild(cursorCircle);
 
-// gsap.from('.header-logo', {
-//     duration: 1,
-//     opacity: 0,
-//     y: -50
-// })
+    let currentHighlighted = null;
 
-const timeline = gsap.timeline({ defaults: { duration: .5 } });
-timeline
-    .from('.header-logo', { opacity: 0, y: -50 })
-    .from('.header-link', { opacity: 0, y: -50, stagger: 0.2 })
+    // Add mousemove event to track cursor and highlight elements
+    document.addEventListener("mousemove", (event) => {
+        const { clientX, clientY } = event; // Use client coordinates for fixed position
+
+        // Move the circle to the cursor position
+        cursorCircle.style.left = `${clientX - cursorCircle.offsetWidth / 2}px`;
+        cursorCircle.style.top = `${clientY - cursorCircle.offsetHeight / 2}px`;
+
+        // Find the element under the cursor
+        const hoveredElement = document.elementFromPoint(clientX, clientY);
+
+        // If hoveredElement is different from the current highlighted one
+        if (hoveredElement !== currentHighlighted) {
+            // Remove highlight class from the previous element
+            if (currentHighlighted) {
+                currentHighlighted.classList.remove("highlighted");
+            }
+
+            // Add highlight class to the new element
+            if (hoveredElement && hoveredElement !== cursorCircle) {
+                hoveredElement.classList.add("highlighted");
+                currentHighlighted = hoveredElement;
+            } else {
+                currentHighlighted = null;
+            }
+        }
+    });
+});
+
+
+document.addEventListener('scroll', () => {
+    const svgs = document.querySelectorAll('svg');
+    const scrollPosition = window.scrollY + window.innerHeight;
+
+    svgs.forEach((svg, index) => {
+        const rect = svg.getBoundingClientRect();
+        const svgPosition = rect.top + window.scrollY;
+
+        if (scrollPosition > svgPosition) {
+            svg.style.transform = `scale(${1 + (scrollPosition - svgPosition) / 1000})`;
+        } else {
+            svg.style.transform = 'scale(1)';
+        }
+    });
+});
