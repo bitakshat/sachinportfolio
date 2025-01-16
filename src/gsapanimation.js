@@ -49,7 +49,7 @@ const scrollText = document.querySelector('.beautifulscrollingtext');
 //     },
 // });
 
-// GSAP Animation for beautiful scroll section
+// GSAP Animation for beautiful scrolling section
 gsap.timeline({
     scrollTrigger: {
         trigger: scrollSection, // The section to trigger the animation
@@ -57,7 +57,7 @@ gsap.timeline({
         // end: "+=1500", // Animation runs for 1500px of scrolling
         // scrub: true, // Synchronize with scroll
         // pin: true, // Pin the section while animating
-        toggleActions: "play none reverse reverse",
+        toggleActions: "play none restart reverse",
         markers: false, // Debugging markers
     },
 })
@@ -73,26 +73,47 @@ gsap.timeline({
     })
 
 
-// // timeline for projects section 
+// timeline for projects section 
 gsap.timeline({
     scrollTrigger: {
         trigger: '.projectsection',
         start: "top top",
         end: "bottom bottom",
         // scrub: true,
-        toggleActions: "play none restart none",
+        toggleActions: "play none none none",
         pin: true,
         markers: false
     }
 }).to('.projectsheading', {
     fontSize: "40px",
     duration: 1,
+}).from('.projectshowcaseleft', {
+    x: "-100vw",
+    duration: 1
+}).from('.projectshowcaseright', {
+    x: "100vw",
+    duration: 1
+}).to('.projectsection', {
+    backgroundColor: "#fff"
+}).to('.projectsheading', {
+    color: "#fff"
 })
-    .from('.projectshowcaseleft', {
-        x: "-100vw",
-        duration: 1
-    }).from('.projectshowcaseright', {
-        x: "100vw",
-        duration: 1
-    })
 
+// timeline for recommendation section
+// gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '.recommendationsection',
+//         start: "-500px",
+//         end: "bottom bottom",
+//         // scrub: true,
+//         toggleActions: "play none none none",
+//         pin: false,
+//         markers: false
+//     }
+// }).to('.recommendationsection', {
+//     backgroundColor: "#000",
+//     duration: .5
+// }).to('.recommendataionsectionheading', {
+//     color: "#fff",
+//     duration: .5
+// })

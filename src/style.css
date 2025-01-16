@@ -2,4 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+ font-family: "Poppins", serif;
+  font-style: normal;
+}
 
+.owl-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.owl-next, .owl-prev {
+    font-size: 50px !important;
+    border-radius: 100%;
+    width: 50px;
+    color: #a1a1a1 !important;
+    outline: none !important;
+}
+
+.owl-stage {
+    padding-bottom: 50px;
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer {
+    background-image: url('./assets/images/layeredbackgrounddark.svg');
+}

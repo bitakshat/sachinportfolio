@@ -8,6 +8,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css">
   <link rel="stylesheet" href="./src/style.css">
   <title>Sachin Portfolio</title>
+
+  <!-- google fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- aos import  -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 </head>
 
 <body class="scroll-smooth">
@@ -22,9 +36,9 @@
       </div>
     </a>
     <ul class="flex gap-8 items-center justify-end w-1/2 hover:[&>li]:font-bold transition-all duration-300">
-      <li class="header-link"><a href="/">About Me</a></li>
-      <li class="header-link"><a href="/experience">Experience</a></li>
-      <li class="header-link"><a href="/projects">Projects</a></li>
+      <li class="header-link"><a href="/">about</a></li>
+      <li class="header-link"><a href="/experience">expriences</a></li>
+      <li class="header-link"><a href="/projects">projects</a></li>
     </ul>
   </nav>
 
@@ -57,7 +71,7 @@
       <div class="w-1/2 flex justify-around gap-[50px] items-start flex-col mt-[100px]">
 
         <!-- experiences pane  -->
-        <div class="flex gap-[10px]">
+        <div class="flex gap-[10px]" data-aos="fade-left">
           <!-- line  -->
           <div class="w-[2px] h-full bg-slate-500 !py-[20px]"></div>
           <div class="flex gap-[20px] justify-center items-center">
@@ -73,7 +87,7 @@
           </div>
         </div>
 
-        <div class="flex gap-[10px]">
+        <div class="flex gap-[10px]" data-aos="fade-left">
           <!-- line  -->
           <div class="w-[2px] h-full bg-slate-500 !py-[20px]"></div>
           <div class="flex gap-[20px] justify-center items-center">
@@ -89,7 +103,7 @@
           </div>
         </div>
 
-        <div class="flex gap-[10px]">
+        <div class="flex gap-[10px]" data-aos="fade-left">
           <!-- line  -->
           <div class="w-[2px] h-full bg-slate-500 !py-[20px]"></div>
           <div class="flex gap-[20px] justify-center items-center">
@@ -121,7 +135,7 @@
   </section>
 
   <section
-    class="next-section h-screen bg-black flex justify-center items-center flex-col projectsection overflow-x-hidden">
+    class="spacer layer next-section h-screen bg-black flex justify-center items-center flex-col projectsection overflow-x-hidden">
     <h1 class="text-[#fff] text-[150px] text-center projectsheading whitespace-nowrap mt-[100px]"
       style="font-size: 150px">
       Highlighted Creations...</h1>
@@ -231,17 +245,472 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
 
-  <!-- projects  -->
-  <section class="w-full h-full">
-    <h1 class="text-6xl text-center text-gray-500 mt-[50px]" data-aos="fade-up">Section</h1>
+  <!-- ===================================================== SKILLS AND EXPERTIESSECTION: START ===================================================== -->
+  <section class="w-full h-full py-[100px]">
+    <h1 class="text-6xl text-center text-gray-500 mt-[50px]" data-aos="fade-up">Technologies and Frameworks</h1>
+
+    <div class="w-full h-full p-[50px] mt-[50px]" data-aos="fade-up" data-aos-delay>
+      <div class="flex justify-center items-center flex-wrap gap-[10px] [&>div>span]:whitespace-nowrap">
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/flutter.svg" class="w-[25px]"><span>Flutter</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/androidstudio.svg" class="w-[25px]"><span>Android Studio</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/firebase.svg" class="w-[25px]"><span>Firebase</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/node.png" class="w-[25px]"><span>NodeJs</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/express.svg" class="w-[25px]"><span>Express</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/restapi.png" class="w-[25px]"><span>RestAPI</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/npm.svg" class="w-[25px]"><span>NPM</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/java.svg" class="w-[25px]"><span>Java</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/dart.svg" class="w-[25px]"><span>Dart</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/c.png" class="w-[25px]"><span>C</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/cpp.svg" class="w-[25px]"><span>C++</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/python.svg" class="w-[25px]"><span>Python</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/javascript.svg" class="w-[25px]"><span>Javascript</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/github.svg" class="w-[25px]"><span>Github</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/gitlab.svg" class="w-[25px]"><span>GitLab</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/bitbucket.svg" class="w-[25px]"><span>Bitbucket</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/mongodb.png" class="w-[25px]"><span>MongoDB</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/jira.svg" class="w-[25px]"><span>Jira</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/trello.svg" class="w-[25px]"><span>Trello</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/confluence.svg" class="w-[25px]"><span>Confluence</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <img src="./src/assets/icons/chatgpt.svg" class="w-[25px]"><span>chatGPT</span>
+        </div>
+      </div>
+
+      <div class="flex justify-center items-center flex-wrap gap-[10px] [&>div>span]:whitespace-nowrap mt-[50px]">
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <span>Debugging</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <span>Asynchronous Programming</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <span>Add To App Flutter</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <span>Coding Standards</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <span>Cross Functional Design Patterns</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <span>Mobile App Architecture</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <span>State Management</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <span>Data Structures & Algorithms</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <span>Hacker Rank Golden Badge</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <span>Planning & Execution</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <span>Debugging</span>
+        </div>
+        <div
+          class="w-max flex justify-center items-center gap-[3px] px-[5px] py-[2px] rounded-[8px] border border-gray-200 text-gray-600 bg-gray-200 hover:bg-white transition-all duration-500 hover:border-gray-500">
+          <span>CI/CD</span>
+        </div>
+      </div>
+    </div>
+
   </section>
 
-  <img src="./src/assets/images/skyline-1751179.svg" alt="skyline" class="mt-[50px]">
+  <!-- ===================================================== SKILLS AND EXPERTIESSECTION: END ===================================================== -->
+
+  <!-- <img src="./src/assets/images/skyline-1751179.svg" alt="skyline" class="mt-[50px] w-full"> -->
+
+  <!-- another beautiful scrolling section  -->
+  <section class="w-full certificationssection">
+    <h1 class="text-6xl text-center text-gray-500 mt-[50px]" data-aos="fade-up">Licenses and Certifications</h1>
+    <div class="w-full h-full px-[200px] flex justify-center items-center">
+      <div class="w-1/2 flex justify-start items-start flex-col mt-[100px] gap-[30px]">
+
+        <div class="flex justify-center items-center gap-[20px] hover:backdrop-blur-2xl bg-white/30"
+          data-aos="fade-right">
+          <img src="./src/assets/images/hackerrank.png" class="scale-[1.5]" alt="" />
+          <div class="flex flex-col">
+            <h4 class="text-[20px] font-[600] text-gray-600">HackerRank</h4>
+            <span>HackerRank</span>
+            <span class="text-gray-500 font-[200]">Issued Sep 2020</span>
+            <span class="text-gray-500 font-[200]">Credential ID C41BC110BCD3</span>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center gap-[20px] hover:backdrop-blur-2xl bg-white/30"
+          data-aos="fade-right">
+          <img src="./src/assets/images/googleicon.svg" class="scale-[1.5]" alt="" />
+          <div class="flex flex-col">
+            <h4 class="text-[20px] font-[600] text-gray-600">Firebase Study Jams</h4>
+            <span>Google Developer Groups Jalandhar (GDG Jalandhar)</span>
+            <span class="text-gray-500 font-[200]">Issued Sep 2020</span>
+            <span class="text-gray-500 font-[200]">Credential ID C41BC110BCD3</span>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center gap-[20px] hover:backdrop-blur-2xl bg-white/30"
+          data-aos="fade-right">
+          <img src="./src/assets/images/googleicon.svg" class="scale-[1.5]" alt="" />
+          <div class="flex flex-col">
+            <h4 class="text-[20px] font-[600] text-gray-600">Flutter Study Jams</h4>
+            <span>Google Developer Groups Jalandhar (GDG Jalandhar)</span>
+            <span class="text-gray-500 font-[200]">Issued Sep 2020</span>
+            <span class="text-gray-500 font-[200]">Credential ID C41BC110BCD3</span>
+          </div>
+        </div>
+      </div>
+      <div class="w-1/2">
+        <img src="./src/assets/images/yogaillustration.svg" alt="image"
+          class="w-full h-auto scale-[0.5] rounded-[12px] mt-[100px]" data-aos="fade-left" />
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full my-[150px] recommendationsection">
+    <div class="w-full flex justify-center items-center">
+      <h1 class="relative w-max text-6xl text-center text-gray-500 mt-[50px] recommendataionsectionheading"
+        data-aos="fade-up">
+        <img src="./src/assets/images/quoteicon.png" alt="quote icon"
+          class="absolute top-[-10px] left-[-10px] -translate-x-full" />Recommendations<img
+          src="./src/assets/images/quoteicon.png" alt="quote icon" class="absolute right-[-30px] top-[-10px] " />
+      </h1>
+    </div>
+
+    <div class="w-full px-4 flex justify-center items-center py-[100px]" data-aos="fade-up">
+      <div class="owl-carousel [&>div]:scale-[0.7]">
+        <!-- First Testimonial -->
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10 h-[350px] overflow-y-auto">
+          <div class="flex gap-4 items-center">
+            <img class="!w-[100px] !h-[100px] rounded-full" src="./src/assets/testimonialsimages/poitr image.jpg"
+              alt="user avatar" loading="lazy">
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Piotr Walczuk</h6>
+                <p class="text-sm text-gray-500">Flutter and mobile apps enthusiast</p>
+                <span class="text-xs text-gray-500">May 26, 2024, Piotr was senior to Sachin but didn't manage Sachin
+                  directly</span>
+              </div>
+              <a href="https://twitter.com/ravikumar/status/1234567890" class="text-blue-500 hover:text-blue-600 ml-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">"During my collaboration with Sachin, he demonstrated a tremendous eagerness to learn and
+            always aimed to do his best on
+            every task. I remember being surprised at how mature he was as a developer, despite having little experience
+            at the
+            time. I believe that the IT industry lacks individuals with his character and drive."</p>
+        </div>
+
+        <!-- Second Testimonial -->
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10 h-[350px] overflow-y-auto">
+          <div class="flex gap-4 items-center">
+            <img class="!w-[100px] !h-[100px] rounded-full" src="./src/assets/testimonialsimages/sarvesh pic.jpg"
+              alt="user avatar" loading="lazy">
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Sarvesh Chavan</h6>
+                <p class="text-sm text-gray-500">SWE @Google</p>
+                <span class="text-xs text-gray-500">July 5, 2022, Sarvesh managed Sachin directly</span>
+              </div>
+              <a href="https://twitter.com/ravikumar/status/1234567890" class="text-blue-500 hover:text-blue-600 ml-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">"Sachin is a very creative and hard working individual. Whether it was about developing a new
+            feature or prototyping new
+            designs he always used to raise the bar. He is a quick learner too and does development with complete
+            ownership. I was
+            fortunate enough to have him in my team.."
+          </p>
+        </div>
+
+        <!-- Third Testimonial -->
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10 h-[350px] overflow-y-auto">
+          <div class="flex gap-4 items-center">
+            <img class="!w-[100px] !h-[100px] rounded-full" src="./src/assets/testimonialsimages/profileplaceholder.jpg"
+              alt="user avatar" loading="lazy">
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Yash Pathak</h6>
+                <p class="text-sm text-gray-500">Sr. Engineer, Technology</p>
+                <span class="text-xs text-gray-500">April 18, 2023, Yash worked with Sachin on the same team</span>
+              </div>
+              <a href="https://twitter.com/ravikumar/status/1234567890" class="text-blue-500 hover:text-blue-600 ml-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">"Sachin is a talented Flutter developer who is passionate about mobile app development. He is
+            a creative problem solver
+            and is always eager to learn new technologies. He brings enthusiasm and dedication to every project he works
+            on. It's
+            been a pleasure working with him, and I'm sure he will continue to be a valuable asset to any team."</p>
+        </div>
+
+        <!-- Fifth Testimonial -->
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10 h-[350px] overflow-y-auto">
+          <div class="flex gap-4 items-center">
+            <img class="!w-[100px] !h-[100px] rounded-full" src="./src/assets/testimonialsimages/rohan image.jpg"
+              alt="user avatar" loading="lazy">
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Rohan Mahale</h6>
+                <p class="text-sm text-gray-500">Product | UX | Customer Centricity | Driving Innovation in Tech and
+                  Digital Products | Product-Led Growth</p>
+                <span class="text-xs text-gray-500">November 29, 2022, Rohan worked with Sachin on the same team</span>
+              </div>
+              <a href="https://twitter.com/ravikumar/status/1234567890" class="text-blue-500 hover:text-blue-600 ml-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">"Sachin is an exceptional developer and an even better team member. He is an absolute joy to
+            work with. His attention to
+            detail, creative problem solving and overall joyful attitude are just some of the few reasons that he will
+            be an asset
+            to any team that he is a part of."</p>
+        </div>
+
+        <!-- Sixth Testimonial -->
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10 h-[350px] overflow-y-auto">
+          <div class="flex gap-4 items-center">
+            <img class="!w-[100px] !h-[100px] rounded-full" src="./src/assets/testimonialsimages/profileplaceholder.jpg"
+              alt="user avatar" loading="lazy">
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Kejal Jain</h6>
+                <p class="text-sm text-gray-500">Product Designer at Nuclei</p>
+                <span class="text-xs text-gray-500">November 29, 2022, Kejal worked with Sachin on the same team</span>
+              </div>
+              <a href="https://twitter.com/ravikumar/status/1234567890" class="text-blue-500 hover:text-blue-600 ml-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">"I had an opportunity to work with Sachin and it was indeed a great experience. He is an
+            exceptional developer who
+            possesses all the skills one would want as an excellent mobile developer. As a designer, he was a blessing
+            in disguise
+            as all the designs were developed in stipulated time."</p>
+        </div>
+
+        <!-- Seventh Testimonial -->
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10 h-[350px] overflow-y-auto">
+          <div class="flex gap-4 items-center">
+            <img class="!w-[100px] !h-[100px] rounded-full" src="./src/assets/testimonialsimages/profileplaceholder.jpg"
+              alt="user avatar" loading="lazy">
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Kejal Jain</h6>
+                <p class="text-sm text-gray-500">Product Designer at Nuclei</p>
+                <span class="text-xs text-gray-500">November 29, 2022, Kejal worked with Sachin on the same team</span>
+              </div>
+              <a href="https://twitter.com/ravikumar/status/1234567890" class="text-blue-500 hover:text-blue-600 ml-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">"I had an opportunity to work with Sachin and it was indeed a great experience. He is an
+            exceptional developer who
+            possesses all the skills one would want as an excellent mobile developer. As a designer, he was a blessing
+            in disguise
+            as all the designs were developed in stipulated time."</p>
+        </div>
+
+        <!-- Eighth Testimonial -->
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10 h-[350px] overflow-y-auto">
+          <div class="flex gap-4 items-center">
+            <img class="!w-[100px] !h-[100px] rounded-full" src="./src/assets/testimonialsimages/profileplaceholder.jpg"
+              alt="user avatar" loading="lazy">
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Mayank Lakhani</h6>
+                <p class="text-sm text-gray-500">Co-Founder & CEO - RansahAl</p>
+                <span class="text-xs text-gray-500">November 25, 2022, Mayank worked with Sachin on the same team</span>
+              </div>
+              <a href="https://twitter.com/ravikumar/status/1234567890" class="text-blue-500 hover:text-blue-600 ml-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">"Sachin is a thorough professional and highly skilled at what he does. A complete team worker
+            with a problem solving
+            approach towards everything between his work and personal life. There’s always something to learn from him."
+          </p>
+        </div>
+
+        <!-- Nineth Testimonial -->
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10 h-[350px] overflow-y-auto">
+          <div class="flex gap-4 items-center">
+            <img class="!w-[100px] !h-[100px] rounded-full"
+              src="./src/assets/testimonialsimages/krishna bharath kalla.jpg" alt="user avatar" loading="lazy">
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Krishna Bharath Kalla</h6>
+                <p class="text-sm text-gray-500">Product Manager | Product Innovation @ Carnegie Mellon University</p>
+                <span class="text-xs text-gray-500">July 25, 2023, Krishna Bharath worked with Sachin on the same
+                  team</span>
+              </div>
+              <a href="https://twitter.com/ravikumar/status/1234567890" class="text-blue-500 hover:text-blue-600 ml-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">"Sachin's ability to code swiftly and efficiently is truly impressive. Working with Sachin was
+            an amazing experience, and
+            his dedication to delivering top-notch results is commendable."</p>
+        </div>
+
+        <!-- Tenth Testimonial -->
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10 h-[350px] overflow-y-auto">
+          <div class="flex gap-4 items-center">
+            <img class="!w-[100px] !h-[100px] rounded-full" src="./src/assets/testimonialsimages/sonika.jpg"
+              alt="user avatar" loading="lazy">
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Sonika Thakur</h6>
+                <p class="text-sm text-gray-500">Building ArisInfra | All things Talent</p>
+                <span class="text-xs text-gray-500">June 3, 2022, Sonika was senior to Sachin but didn't manage Sachin
+                  directly</span>
+              </div>
+              <a href="https://twitter.com/ravikumar/status/1234567890" class="text-blue-500 hover:text-blue-600 ml-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">"Sachin is an excellent resource and a great problem solver. He is a person that is very
+            professional, helpful,
+            responsible, soft-spoken, and upbeat.
+            He would be an incredible asset to any team. And I have no doubt that, with the correct guidance and
+            training, he can
+            flourish in a higher-level role. He's simply amazing. It is my pleasure and honour to recommend him to
+            anyone seeking an
+            opportunity to work with him."
+          </p>
+        </div>
+
+        <!-- Eleventh Testimonial -->
+        <div
+          class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10 h-[350px] overflow-y-auto">
+          <div class="flex gap-4 items-center">
+            <img class="!w-[100px] !h-[100px] rounded-full" src="./src/assets/testimonialsimages/wafir.jpg"
+              alt="user avatar" loading="lazy">
+            <div class="flex-1 flex justify-between items-start">
+              <div>
+                <h6 class="text-lg font-medium text-gray-700">Wafir Manakad</h6>
+                <p class="text-sm text-gray-500">McKinsey | HEC Paris</p>
+                <span class="text-xs text-gray-500">May 29, 2022, Wafir worked with Sachin on the same team</span>
+              </div>
+              <a href="https://twitter.com/ravikumar/status/1234567890" class="text-blue-500 hover:text-blue-600 ml-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-8">"Sachin is a standout developer when it comes to building mobile products from inception to
+            completion. Having worked
+            with him on multiple products, I've come to appreciate his strong understanding of user experience, along
+            with a stellar
+            coding backbone.
+
+            He comes up with solutions to challenging problems in the most efficient manner, and always puts the user
+            first. I would
+            highly recommend Sachin to anyone looking to build a reliable and scalable mobile app solution."
+          </p>
+        </div>
+
+      </div>
+
+  </section>
 
   <footer>
     <div class="w-full h-[100px] flex justify-center items-center bg-[#000] text-white">
@@ -251,10 +720,35 @@
 
   <script type="module" defer src="/src/gsapanimation.js"></script>
   <script type="module" defer src="/src/main.js"></script>
-  <script type="text/javascript" defer>
-    import AOS from 'aos';
-    import 'aos/dist/aos.css';
-    AOS.init();
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    AOS.init({
+      delay: 500,
+      duration: 1000
+    });
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        loop: true, // Infinite loop
+        margin: 16, // Space between items
+        nav: true, // Next/Prev buttons
+        dots: true, // Pagination dots
+        autoplay: false, // Auto-scroll
+        autoplayTimeout: 3000, // Delay between auto-scrolls
+        autoplayHoverPause: true,
+        fluidSpeed: 1000,
+        smartSpeed: 1000,
+        responsive: {
+          0: { items: 1 }, // 1 item for small screens
+          640: { items: 2 }, // 2 items for medium screens
+          1024: { items: 3 }, // 3 items for large screens
+        },
+      });
+    });
   </script>
 </body>
 

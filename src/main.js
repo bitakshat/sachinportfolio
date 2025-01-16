@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Create the circle element
     const cursorCircle = document.createElement("div");
     cursorCircle.style.position = "fixed";
-    cursorCircle.style.width = "100px";
-    cursorCircle.style.height = "100px";
+    cursorCircle.style.width = "50px";
+    cursorCircle.style.height = "50px";
     cursorCircle.style.border = "2px solid rgba(135, 135, 135, 0.2)";
     cursorCircle.style.borderRadius = "50%";
     cursorCircle.style.pointerEvents = "none";
