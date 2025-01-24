@@ -4,25 +4,25 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 // First, modify your HTML to properly hide the main content
-// const style = document.createElement('style');
-// style.textContent = `
-//   .hidden-content {
-//     display: none;
-//     opacity: 0;
-//   }
+const style = document.createElement('style');
+style.textContent = `
+  .hidden-content {
+    display: none;
+    opacity: 0;
+  }
 
-//   body {
-//     overflow: hidden;
-//   }
+  body {
+    overflow: hidden;
+  }
 
-//   .loading-screen-container {
-//     position: fixed;
-//     width: 100%;
-//     height: 100%;
-//     z-index: 1000;
-//   }
-// `;
-// document.head.appendChild(style);
+  .loading-screen-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+`;
+document.head.appendChild(style);
 
 // Pre-load main content animations
 const mainTimeline = gsap.timeline({ paused: true });
@@ -44,54 +44,54 @@ gsap.to('.loading-text', {
 }, 3);
 
 // Modified timeline for loading animation
-// const loadingTimeline = gsap.timeline({
-//     onComplete: () => {
-//         // Show main content first but keep it invisible
-//         const mainContent = document.querySelector('.hidden-content');
-//         mainContent.style.display = 'block';
+const loadingTimeline = gsap.timeline({
+    onComplete: () => {
+        // Show main content first but keep it invisible
+        const mainContent = document.querySelector('.hidden-content');
+        mainContent.style.display = 'block';
 
-//         // Create a smooth transition timeline
-//         const transitionTimeline = gsap.timeline();
+        // Create a smooth transition timeline
+        const transitionTimeline = gsap.timeline();
 
-//         transitionTimeline
-//             .to('.loading-screen-container', {
-//                 opacity: 0,
-//                 duration: 0.5,
-//                 onComplete: () => {
-//                     document.querySelector('.loading-screen-container').style.display = 'none';
-//                     document.body.style.overflow = 'auto';
-//                 }
-//             })
-//             .to('.hidden-content', {
-//                 opacity: 1,
-//                 duration: 0.5,
-//                 onStart: () => {
-//                     // Initialize main animations right before fade-in starts
-//                     initializeMainAnimations();
-//                 }
-//             });
-//     }
-// });
+        transitionTimeline
+            .to('.loading-screen-container', {
+                opacity: 0,
+                duration: 0.5,
+                onComplete: () => {
+                    document.querySelector('.loading-screen-container').style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            })
+            .to('.hidden-content', {
+                opacity: 1,
+                duration: 0.5,
+                onStart: () => {
+                    // Initialize main animations right before fade-in starts
+                    initializeMainAnimations();
+                }
+            });
+    }
+});
 
-// loadingTimeline
-//     .to('.upper-loading-section', {
-//         y: "-100vh",
-//         ease: "power3.in",
-//         duration: 2
-//     }, 3)
-//     .to('.lower-loading-section', {
-//         y: "100vh",
-//         ease: "power3.in",
-//         duration: 2,
-//     }, 3)
-//     .to('.loading-text', {
-//         color: "#000",
-//         duration: 2,
-//         textDecoration: "strikethrough",
-//     }, 3)
-//     .to('.loading-line', {
-//         opacity: 0
-//     });
+loadingTimeline
+    .to('.upper-loading-section', {
+        y: "-100vh",
+        ease: "power3.in",
+        duration: 2
+    }, 3)
+    .to('.lower-loading-section', {
+        y: "100vh",
+        ease: "power3.in",
+        duration: 2,
+    }, 3)
+    .to('.loading-text', {
+        color: "#000",
+        duration: 2,
+        textDecoration: "strikethrough",
+    }, 3)
+    .to('.loading-line', {
+        opacity: 0
+    });
 
 function initializeMainAnimations() {
 
@@ -256,4 +256,4 @@ function initializeMainAnimations() {
         });
 }
 
-initializeMainAnimations()
+// initializeMainAnimations()
