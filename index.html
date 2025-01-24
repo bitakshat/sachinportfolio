@@ -22,29 +22,41 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <!-- cute js  -->
+  <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
 </head>
 
 <body class="scroll-smooth">
 
   <!-- loading screen  -->
-  <section class="relative w-full h-screen bg-[#fff] loading-screen-container overflow-y-hidden">
+  <!-- <section class="relative w-full h-screen bg-[#fff] loading-screen-container overflow-y-hidden">
     <div class="bg-[#000] w-full h-1/2 upper-loading-section"></div>
     <h1
-      class="absolute !z-[10] -translate-x-1/2 -translate-y-[calc(50%+20px)] left-1/2 top-1/2 uppercase tracking-[25px] text-center font-thin text-[#fff] loading-text text-[50px]">
+      class="absolute !z-[10] -translate-x-1/2 -translate-y-[calc(50%+20px)] left-1/2 top-1/2 uppercase tracking-[15px] text-center font-thin text-[#fff] loading-text text-[50px]">
       Sachin Singh</h1>
     <div class="absolute !z-[0] -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-0 h-[1px] bg-[#fff] loading-line">
     </div>
     <div class="bg-[#000] w-full h-1/2 lower-loading-section"></div>
-  </section>
+  </section> -->
 
   <main class="hidden-content">
     <!-- header - navbar  -->
     <nav class="p-6 px-[150px] flex justify-between items-center w-full border-b-[1.5px] border-gray-300">
       <ul
-        class="flex gap-8 items-center justify-center w-full hover:[&>li]:font-bold transition-all duration-300 text-gray-500">
-        <li class="header-link"><a href="/">about</a></li>
-        <li class="header-link"><a href="/experience">expriences</a></li>
-        <li class="header-link"><a href="/projects">projects</a></li>
+        class="flex gap-8 items-center justify-center w-full hover:[&>li]:font-bold transition-all duration-300 text-gray-500 [&>li]:underline [&>li]:underline-offset-2 hover:[&>li]:line-through">
+        <div class="relative overflow-hidden">
+          <li class="header-link"><a href="/">about</a></li>
+          <div class="absolute top-0 left-0 w-full h-full bg-black reveal-overlay"></div>
+        </div>
+        <div class="relative overflow-hidden">
+          <li class="header-link"><a href="/experience">expriences</a></li>
+          <div class="absolute top-0 left-0 w-full h-full bg-black reveal-overlay"></div>
+        </div>
+        <div class="relative overflow-hidden">
+          <li class="header-link"><a href="/projects">projects</a></li>
+          <div class="absolute top-0 left-0 w-full h-full bg-black reveal-overlay"></div>
+        </div>
       </ul>
     </nav>
 
@@ -56,30 +68,41 @@
           class="landing-image-background absolute w-[50%] h-[50%] bg-gray-200 rounded-full -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
         </div>
         <img src="./src/assets/images/marcus aurelius.png" alt="home page developer illustration"
-          class="landing-image-motion z-[10] !scale-[0.8] filter grayscale p-[10px] landing-image-motion">
+          class="landing-image-motion z-[10] !scale-[0.8] filter grayscale p-[10px]">
         <!-- cross -->
         <div
           class="cross-one w-[50px] h-full bg-[#000] absolute rotate-45 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 -skew-y-[45deg]">
         </div>
+        <div>
+          <img src="./src/assets/images/abstractdiagonalbackgrond.jpg" alt=""
+            class="absolute top-[10%] left-[-30%] scale-[0.3] landing-abastract-background">
+          <div class="absolute top-0 left-0 w-full h-full bg-white reveal-overlay"></div>
+        </div>
       </div>
       <div class="w-1/2 flex items-center justify-center flex-col gap-[20px] text-center landing-page-text">
         <div class="text-container">
-          <h1
-            class="animated-text text text-[5.5rem] text-gray-900 w-full h-full [text-shadow:_6px_4px_4px_rgb(84_84_84_/_0.3)] landing-heading">
-            Sachin Singh
-          </h1>
+          <div class="relative overflow-hidden">
+            <h1
+              class="reveal-text text-[5.5rem] text-gray-900 w-full h-full [text-shadow:_6px_4px_4px_rgb(84_84_84_/_0.3)] landing-heading">
+              Sachin Singh
+            </h1>
+            <div class="absolute top-0 left-0 w-full h-full bg-black reveal-overlay"></div>
+          </div>
         </div>
-        <p class="landing-content text-gray-400">A Software Engineer with strong knowledge of <span
-            class="hover:text-green-600 transition-colors duration-1000 ease-out">Android SDK</span>, <span
-            class="hover:text-blue-600 transition-colors duration-1000 ease-out">Flutter Engine</span>
-          and worked
-          with 3rd party APIs. Well versed in State Management Architecture and Field Best Practices.
-        </p>
+        <div class="relative overflow-hidden">
+          <p class="landing-content text-gray-400">A Software Engineer with strong knowledge of <span
+              class="hover:text-green-600 transition-colors duration-1000 ease-out">Android SDK</span>, <span
+              class="hover:text-blue-600 transition-colors duration-1000 ease-out">Flutter Engine</span>
+            and worked
+            with 3rd party APIs. Well versed in State Management Architecture and Field Best Practices.
+          </p>
+          <div class="absolute top-0 left-0 w-full h-full bg-black reveal-overlay"></div>
+        </div>
       </div>
 
       <div
         class="landing-image-motion absolute bottom-[calc(20%)] right-0 h-max flex justify-center items-center flex-col">
-        <span class="text-[15px] tracking-[5px] uppercase" style="writing-mode: vertical-lr;">Scroll
+        <span class="text-[15px] tracking-[5px] uppercasdsdddddddsdse" style="writing-mode: vertical-lr;">Scroll
           Down</span>
         <img
           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAABYUlEQVR4nO3YvytGYRjG8a/flFCS+Y1ktbOTLEoZlNFgMCiTyT+AwaAYZDEQyWp4y4KSgSKUqLcYRInFr05d6mRBFu+5r0+dOs/9dIbrPud0nvOAmZmZmZmZmZmZWXGpAqoJ7BQ4BxoIKg+8AytACQG1Ag9qwgRBdQMvwCvQS1CTegoegS4CKgGW1IR7oJOAylJNeAYGCfokTAFvasQiUEdAPcCNmlAAxoHa7y4qBfZ1UbEea6k8jcCcvhDJ3NFPGnD4D0L85dj+kmkAeNLcJhm1oIBnQHOqPqa1QTI3D1SQQf0KmKwGW1I/SMuqJ3d/iIyqBK4UdFi1JmBHtUuggwwbUdA9jXPAhWq7X16HTDpW2D6gDbjWeBWoIeNyCnun8AWNZ/U1y7xRBc5rQyQ5n460JzCv0J9L3plI4RNbqcXPRrTwiQOFPwHqCWgduAXaCao8+na4mZmZmZmZmZmZ8WsfcgWu+h8Ra8YAAAAASUVORK5CYII="
@@ -87,71 +110,44 @@
       </div>
     </section>
 
-    <!-- work experience -->
-    <section class="relative w-full px-[50px] py-[50px] border-b-2 overflow-x-hidden">
-      <h1 class="text-6xl text-center text-gray-500 mt-[50px]" data-aos="fade-up">Work Experience</h1>
-      <div class="w-full h-full flex">
-        <div class="w-1/2 flex-1 flex justify-center items-center flex-col px-[80px] mt-[100px]"></div>
+    <!-- ===================================================== WORK EXPERIENCE SECSSION: START ===================================================== -->
+    <section class="relative workexperience-trigger w-full h-auto px-[50px] flex justify-center items-center flex-col">
+      <div class="relative overflow-hidden">
+        <h1 class="text-6xl text-center text-gray-900 mt-[50px]" data-aos="fade-up">Work Experience</h1>
+        <div class="absolute top-0 left-0 w-full h-full bg-black trigger-reveal-overlay"></div>
+      </div>
 
-        <div class="w-1/2 flex justify-around gap-[50px] items-start flex-col mt-[100px]">
-
-          <!-- experiences pane  -->
-          <div class="flex gap-[10px]" data-aos="fade-left">
-            <!-- line  -->
-            <div class="w-[2px] h-full bg-slate-500 !py-[20px]"></div>
-            <div class="flex gap-[20px] justify-center items-center">
-              <img src="https://picsum.photos/100" alt="organization logo" class="rounded-[8px] filter grayscale" />
-              <div class="text-gray-400">
-                <h3 class="text-[30px] text-gray-500 rounded-full">SDE II Mobile</h3>
-                <div class="flex flex-row">
-                  <span>Junglee Games - Full Time</span>
-                  <span>Dec 2022 - Present</span>
-                  <span>Bengaluru, Karnataka, India</span>
-                </div>
-              </div>
-            </div>
+      <!-- Main Experience Card -->
+      <div class="mt-[150px] flex justify-center items-center">
+        <!-- Experience Card Row -->
+        <div class="h-max flex justify-center items-start gap-[30px] px-[150px] py-[50px] relative">
+          <div>
+            <h4 class="font-bold text-lg">Junglee Games - Full Time</h4>
+            <span class="block text-sm text-gray-600">Dec 2022 - Present</span>
+            <span class="block text-sm text-gray-600">Bengaluru, Karnataka, India</span>
           </div>
-
-          <div class="flex gap-[10px]" data-aos="fade-left">
-            <!-- line  -->
-            <div class="w-[2px] h-full bg-slate-500 !py-[20px]"></div>
-            <div class="flex gap-[20px] justify-center items-center">
-              <img src="https://picsum.photos/100" alt="organization logo" class="rounded-[8px] filter grayscale" />
-              <div class="text-gray-400">
-                <h3 class="text-[30px] text-gray-500 rounded-full">Flutter Developer</h3>
-                <div class="flex flex-row">
-                  <span>Tickled Media (theAsianparent Group) - FullTime</span>
-                  <span>Feb 2021 - Nov 2022</span>
-                  <span>Mumbai, Maharashtra, India</span>
-                </div>
-              </div>
-            </div>
+          <!-- Flex column containing dot and line -->
+          <div class="flex flex-col items-center h-full relative">
+            <!-- Dot -->
+            <div class="w-[15px] h-[15px] bg-black rounded-full z-10"></div>
+            <!-- Dynamic Line -->
+            <div class="absolute top-0 bottom-0 w-[3px] bg-black"></div>
           </div>
-
-          <div class="flex gap-[10px]" data-aos="fade-left">
-            <!-- line  -->
-            <div class="w-[2px] h-full bg-slate-500 !py-[20px]"></div>
-            <div class="flex gap-[20px] justify-center items-center">
-              <img src="https://picsum.photos/100" alt="organization logo" class="rounded-[8px] filter grayscale" />
-              <div class="text-gray-400">
-                <h3 class="text-[30px] text-gray-500 rounded-full">Flutter Developer</h3>
-                <div class="flex flex-row">
-                  <span>Junglee Games - Full Time</span>
-                  <span>Dec 2022 - Present</span>
-                  <span>Bengaluru, Karnataka, India</span>
-                </div>
-              </div>
-            </div>
+          <div class="max-w-[600px]">
+            <h2 class="text-xl font-semibold">SDE II Mobile</h2>
+            <p class="text-sm text-gray-700">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam sapiente harum pariatur sint
+              modi eligendi et ea, commodi tempore necessitatibus hic dolores ab distinctio delectus. Expedita
+              quasi iusto alias repudiandae.
+            </p>
           </div>
         </div>
       </div>
-      <img src="./src/assets/images/treecanopy.svg"
-        class="absolute bottom-0 left-0 w-full max-w-7xl sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-3xl h-auto z-[-1]"
-        alt="illustration" />
+
     </section>
 
     <!-- beautiful scroll section  -->
-    <section class="relative beautifulscroll">
+    <section class=" relative beautifulscroll">
       <img src="./src/assets/images/branchesandbird.svg" alt="skyline"
         class="w-full h-full scale-[0.5] beautifulscrollingimage" />
       <h1
@@ -182,7 +178,6 @@
             </div>
           </div>
         </div>
-
 
         <!-- two  -->
         <div class="flex justify-center items-center bg-gray-100 rounded-lg">
@@ -272,7 +267,6 @@
         </div>
       </div>
     </section>
-
 
     <!-- ===================================================== SKILLS AND EXPERTIESSECTION: START ===================================================== -->
     <section class="w-full h-full py-[100px]">

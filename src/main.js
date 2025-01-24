@@ -59,3 +59,13 @@ document.addEventListener('scroll', () => {
         }
     });
 });
+
+const path = document.querySelector('#line');
+
+// Animate the line using Kute.js
+KUTE.fromTo(
+    path,
+    { strokeDashoffset: 300 }, // Starting point
+    { strokeDashoffset: 0 },   // End point
+    { duration: 2000, easing: 'easeInOutQuad' } // Options
+).start();
