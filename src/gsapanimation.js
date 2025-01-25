@@ -1,5 +1,5 @@
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -100,11 +100,6 @@ function initializeMainAnimations() {
         const timeline = gsap.timeline({ defaults: { duration: 0.5, ease: "power2.out" } });
 
         timeline
-            .from('.header-logo', {
-                opacity: 0,
-                y: -50,
-                clearProps: "all" // Clear properties after animation
-            })
             .from('.header-link', {
                 opacity: 0,
                 y: -50,
@@ -113,8 +108,8 @@ function initializeMainAnimations() {
             }, "-=0.3") // Slightly overlap with previous animation
             .from('.landing-image-background', {
                 scale: .2,
-                duartion: 4
-            })
+                duration: 1
+            }, 1)
 
         gsap.from('.landing-page-image', {
             duration: 1,
@@ -139,10 +134,6 @@ function initializeMainAnimations() {
             delay: 0.3,
             ease: "power2.out",
             clearProps: "all"
-        })
-
-        gsap.from('.landing-abstract-background', {
-            duration: 1,
         })
 
         const tl = gsap.timeline();
@@ -189,7 +180,7 @@ function initializeMainAnimations() {
     gsap.timeline({
         scrollTrigger: {
             trigger: '.workexperience-trigger',
-            start: "bottom bottom",
+            start: "top bottom",
             toggleActions: "play none restart none",
         }
     }).to(".reveal-text", {
@@ -206,23 +197,6 @@ function initializeMainAnimations() {
                 opacity: 1,
                 ease: "power2.inOut"
             })
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: "#line", // Target the SVG
-            start: "top 80%", // Start when SVG is 80% into the viewport
-            toggleActions: "play none none none", // Play animation once
-        }
-    })
-        .to("line", {
-            strokeDashoffset: 0, // Draw the line
-            duration: 2, // Animation duration
-            ease: "power1.inOut",
-        })
-        .to("circle", {
-            opacity: 1, // Fade in the circle
-            duration: 0.5, // Animation duration
-            ease: "power1.inOut",
-        }, "-=0.5");
 
     // Projects section timeline
     gsap.timeline({
@@ -254,6 +228,80 @@ function initializeMainAnimations() {
         .to('.projectsheading', {
             color: "#fff"
         });
+
+    function scrambleTextByWords(element) {
+        // Clone the element to measure dimensions before manipulation
+        const clone = element.cloneNode(true);
+        clone.style.visibility = 'hidden';
+        element.parentNode.insertBefore(clone, element);
+
+        // Measure and set exact dimensions
+        const computedStyle = window.getComputedStyle(clone);
+        element.style.width = `${clone.offsetWidth}px`;
+        element.style.height = `${clone.offsetHeight}px`;
+        element.style.overflow = 'hidden';
+        element.style.display = 'flex';
+
+        // Remove clone
+        clone.parentNode.removeChild(clone);
+
+        const originalText = element.textContent;
+        const words = originalText.split(/\s+/);
+
+        const generateRandomWord = (word) =>
+            Array.from(
+                { length: word.length },
+                () => String.fromCharCode(Math.floor(Math.random() * 26) + 97)
+            ).join('');
+
+        const scrambledWords = words.map(word => generateRandomWord(word));
+
+        // Initial scramble
+        element.textContent = scrambledWords.join(' ');
+
+        // Animate back to original text
+        gsap.to(element, {
+            duration: 3,
+            onUpdate: function () {
+                const progress = this.progress();
+                const currentWords = words.map((word, index) => {
+                    if (progress * words.length > index) return word;
+                    return scrambledWords[index];
+                });
+                element.textContent = currentWords.join(' ');
+            },
+            onComplete: () => {
+                element.textContent = originalText;
+                element.style.width = '';
+                element.style.height = '';
+                element.style.overflow = '';
+                element.style.display = '';
+            }
+        });
+    }
+
+    function initWorkExperienceScramble() {
+        const section = document.querySelector('.workexperience-trigger');
+        const textElements = section.querySelectorAll(
+            '.text-slate-500, .text-sm:not(.text-6xl), .text-slate-900:not(.text-6xl)'
+        );
+
+        ScrollTrigger.create({
+            trigger: section,
+            start: 'top 80%',
+            onEnter: () => {
+                console.log("Entered the viewport");
+
+                textElements.forEach(element => {
+                    scrambleTextByWords(element);
+                });
+            },
+            once: true
+        });
+    }
+
+    // document.addEventListener('DOMContentLoaded', initWorkExperienceScramble);
+    initWorkExperienceScramble()
 }
 
 // initializeMainAnimations()

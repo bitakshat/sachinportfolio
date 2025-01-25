@@ -40,7 +40,8 @@
     <div class="bg-[#000] w-full h-1/2 lower-loading-section"></div>
   </section>
 
-  <main class="hidden-content">
+  <main class="hidden-content"
+    style="background-image: url('./src/assets/images/spectrum-gradient.svg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
     <!-- header - navbar  -->
     <nav class="p-6 px-[150px] flex justify-between items-center w-full border-b-[1.5px] border-gray-300">
       <ul
@@ -65,7 +66,7 @@
     <section class="relative w-full h-screen flex justify-center items-center gap-[30px] px-[150px] cursor-default">
       <div class="relative w-1/2 flex items-center landing-page-image">
         <div
-          class="landing-image-background absolute w-[50%] h-[50%] bg-gray-200 rounded-full -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+          class="landing-image-background absolute w-[50%] h-[50%] bg-gray-300 rounded-full -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
         </div>
         <img src="./src/assets/images/marcus aurelius.png" alt="home page developer illustration"
           class="landing-image-motion z-[10] !scale-[0.8] filter grayscale p-[10px]">
@@ -76,7 +77,7 @@
         <div>
           <img src="./src/assets/images/abstractdiagonalbackgrond.jpg" alt=""
             class="absolute top-[10%] left-[-30%] scale-[0.3] landing-abastract-background">
-          <div class="absolute top-0 left-0 w-full h-full bg-white reveal-overlay"></div>
+          <div class="absolute top-0 left-0 w-full h-full bg-transparent reveal-overlay"></div>
         </div>
       </div>
       <div class="w-1/2 flex items-center justify-center flex-col gap-[20px] text-center landing-page-text">
@@ -111,54 +112,134 @@
     </section>
 
     <!-- ===================================================== WORK EXPERIENCE SECSSION: START ===================================================== -->
-    <section class="relative workexperience-trigger w-full h-auto px-[50px] flex justify-center items-center flex-col">
+    <section id="experience-section"
+      class="relative workexperience-trigger w-full h-auto px-[50px] flex justify-center items-center flex-col">
       <div class="relative overflow-hidden">
-        <h1 class="text-6xl text-center text-gray-900 mt-[50px]" data-aos="fade-up">Work Experience</h1>
+        <h1 class="text-6xl text-center text-gray-900 mt-[50px]">Work Experience</h1>
         <div class="absolute top-0 left-0 w-full h-full bg-black trigger-reveal-overlay"></div>
       </div>
 
-      <!-- Main Experience Card -->
-      <div class="mt-[150px] flex justify-center items-center">
-        <!-- Experience Card Row -->
-        <div class="h-max flex justify-center items-start gap-[30px] px-[150px] py-[50px] relative">
-          <div>
-            <h4 class="font-bold text-lg">Junglee Games - Full Time</h4>
-            <span class="block text-sm text-gray-600">Dec 2022 - Present</span>
-            <span class="block text-sm text-gray-600">Bengaluru, Karnataka, India</span>
+      <div class="my-[100px]">
+
+        <!-- Item #1 -->
+        <div class="relative pl-8 sm:pl-32 py-6 group">
+          <!-- Purple label -->
+          <div class="flex justify-start items-center gap-[10px]">
+            <img src="./src/assets/images/junglee_games_logo.jpg"
+              class="w-[30px] h-[30px] filter grayscale group-hover:filter-none rounded-full" alt="jungee games">
+            <div class=" font-medium text-2xl text-gray-800 mb-1 sm:mb-0">SDE II Mobile</div>
           </div>
-          <!-- Flex column containing dot and line -->
-          <div class="flex flex-col items-center h-full relative">
-            <!-- Dot -->
-            <div class="w-[15px] h-[15px] bg-black rounded-full z-10"></div>
-            <!-- Dynamic Line -->
-            <div class="absolute top-0 bottom-0 w-[3px] bg-black"></div>
+          <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+          <div
+            class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-gray-900 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+            <time
+              class="sm:absolute left-0 translate-y-0.5 -translate-x-1/3 px-[5px] inline-flex items-center justify-center text-xs font-semibold uppercase w-max h-6 mb-3 sm:mb-0 text-gray-400 bg-gray-100 rounded-full whitespace-nowrap">Dec
+              2022 - Present</time>
+            <div class="text-sm  text-slate-900 mt-[10px]">Junglee Games - Full Time</div>
           </div>
-          <div class="max-w-[600px]">
-            <h2 class="text-xl font-semibold">SDE II Mobile</h2>
-            <p class="text-sm text-gray-700">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam sapiente harum pariatur sint
-              modi eligendi et ea, commodi tempore necessitatibus hic dolores ab distinctio delectus. Expedita
-              quasi iusto alias repudiandae.
-            </p>
-          </div>
+          <!-- Content -->
+          <div class="text-slate-500 text-sm">Bengaluru, Karnataka, India</div>
+          <div class="text-slate-500 text-sm">Pretium lectus quam id leo. Urna et pharetra pharetra massa massa.
+            Adipiscing enim
+            eu
+            neque aliquam vestibulum morbi blandit cursus risus.</div>
         </div>
-      </div>
+
+        <!-- Item #2 -->
+        <div class="relative pl-8 sm:pl-32 py-6 group">
+          <!-- Purple label -->
+          <div class="flex justify-start items-center gap-[10px]">
+            <img src="./src/assets/images/theparentinc_logo.jpg" alt="tickld media logo"
+              class="w-[30px] h-[30px] filter grayscale group-hover:filter-none rounded-full">
+            <div class=" font-medium text-2xl text-gray-800 mb-1 sm:mb-0">Flutter Developer</div>
+          </div>
+          <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+          <div
+            class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-gray-900 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+            <time
+              class="sm:absolute left-0 translate-y-0.5 -translate-x-1/3 px-[5px] inline-flex items-center justify-center text-xs font-semibold uppercase w-max h-6 mb-3 sm:mb-0 text-gray-400 bg-gray-100 rounded-full whitespace-nowrap">Feb
+              2021 - Nov 2022</time>
+            <div class="text-sm  text-slate-900 mt-[10px]">Tickled Media (theAsianparent Group) · Full-time</div>
+          </div>
+          <!-- Content -->
+          <div class="text-slate-500 text-sm">Bengaluru, Karnataka, India</div>
+          <div class="text-slate-500 text-sm">Pretium lectus quam id leo. Urna et pharetra pharetra massa massa.
+            Adipiscing enim
+            eu
+            neque aliquam vestibulum morbi blandit cursus risus.</div>
+        </div>
+
+        <!-- Item #3  -->
+        <div class="relative pl-8 sm:pl-32 py-6 group">
+          <!-- Purple label -->
+          <div class="flex justify-start items-center gap-[10px]">
+            <img src="./src/assets/images/commutec.jpg" alt="commutec logo"
+              class="w-[30px] h-[30px] filter grayscale rounded-full group-hover:grayscale-0">
+            <div class=" font-medium text-2xl text-gray-800 mb-1 sm:mb-0">Commutec: Next Gen Smart Moblity
+            </div>
+          </div>
+
+          <!-- Sub Item #1  -->
+          <div class="relative pl-8 sm:pl-32 py-6 group">
+            <!-- Purple label -->
+            <div class="flex justify-start items-center gap-[10px]">
+              <img src="./src/assets/images/commutec.jpg" alt="tickld media logo"
+                class="w-[30px] h-[30px] filter grayscale rounded-full group-hover:filter-none">
+              <div class=" font-medium text-xl text-gray-800 mb-1 sm:mb-0">Flutter Developer</div>
+            </div>
+            <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+            <div
+              class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-gray-900 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+              <div class="text-sm  text-slate-900 mt-[10px]">Aug 2019 - Jan 2021</div>
+            </div>
+            <!-- Content -->
+            <div class="text-slate-500 text-sm">Mumbai, Mahrashtra, Inda</div>
+            <div class="text-slate-500 text-sm">Pretium lectus quam id leo. Urna et pharetra pharetra massa massa.
+              Adipiscing enim
+              eu
+              neque aliquam vestibulum morbi blandit cursus risus.
+            </div>
+          </div>
+
+          <!-- Subitem #2  -->
+          <div class="relative pl-8 sm:pl-32 py-6 group">
+            <!-- Purple label -->
+            <div class="flex justify-start items-center gap-[10px]">
+              <img src="./src/assets/images/commutec.jpg" alt="tickld media logo"
+                class="w-[30px] h-[30px] filter grayscale rounded-full group-hover:filter-none">
+              <div class="font-medium text-xl text-gray-800 mb-1 sm:mb-0">Flutter Developer Intern</div>
+            </div>
+            <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+            <div
+              class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-gray-900 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+              <div class="text-sm  text-slate-900 mt-[10px]">June 2019 - Jul 2021</div>
+            </div>
+            <!-- Content -->
+            <div class="text-slate-500 text-sm">Navi Mumbai, Maharashtra, India</div>
+            <div class="text-slate-500 text-sm">Pretium lectus quam id leo. Urna et pharetra pharetra massa massa.
+              Adipiscing enim
+              neque aliquam vestibulum morbi blandit cursus risus.
+            </div>
+
+          </div>
+
+        </div>
 
     </section>
 
     <!-- beautiful scroll section  -->
-    <section class=" relative beautifulscroll">
+    <section class="relative beautifulscroll flex justify-center items-center">
       <img src="./src/assets/images/branchesandbird.svg" alt="skyline"
         class="w-full h-full scale-[0.5] beautifulscrollingimage" />
       <h1
-        class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-[40px] text-[#fff] beautifulscrollingtext opacity-0">
+        class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-[20px] text-[#fff] beautifulscrollingtext opacity-0 uppercase tracking-[10px] w-full text-center font-[200]">
         "When Creativity Meets Engineering"</h1>
     </section>
 
     <section
       class="spacer layer next-section h-screen bg-black flex justify-center items-center flex-col projectsection overflow-x-hidden">
       <h1 class="text-[#fff] text-[150px] text-center projectsheading whitespace-nowrap mt-[100px]"
-        style="font-size: 150px">
+        style="font-size: 100px">
         Highlighted Creations...</h1>
       <div class="projectshowcaseleft w-full h-full flex justify-center items-center gap-[30px]">
 
