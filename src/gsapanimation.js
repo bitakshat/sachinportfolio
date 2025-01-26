@@ -4,6 +4,11 @@ import Aos from 'aos';
 
 gsap.registerPlugin(ScrollTrigger)
 
+Aos.init({
+    duration: 1200,
+    once: false,
+});
+
 // First, modify your HTML to properly hide the main content
 const style = document.createElement('style');
 style.textContent = `
@@ -44,7 +49,7 @@ gsap.to('.loading-text', {
     opacity: 0
 }, 3);
 
-// Modified timeline for loading animation
+// // Modified timeline for loading animation
 const loadingTimeline = gsap.timeline({
     onComplete: () => {
         // Show main content first but keep it invisible
@@ -265,24 +270,6 @@ function initializeMainAnimations() {
         .to('.projectsheading', {
             color: "#fff"
         });
-
-
-    // skills and experties timeline  
-    // gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: ".skillandexpertiessection",
-    //         start: "bottom bottom",
-    //         toggleActions: "play none reverse none"
-    //     }
-    // })
-    //     .fromTo('.skillsheading', {
-    //         y: "-100px",
-    //         color: "red",
-    //     }, {
-    //         y: "0px",
-    //         color: "blue"
-    //     }, 0)
-
 
     function scrambleTextByWords(element) {
         // Clone the element to measure dimensions before manipulation
