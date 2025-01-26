@@ -18,6 +18,7 @@
 
   <!-- aos import  -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <link rel="stylesheet"
@@ -228,17 +229,31 @@
     </section>
 
     <!-- beautiful scroll section  -->
-    <section class="relative beautifulscroll flex justify-center items-center">
+    <section class="relative beautifulscroll flex justify-center items-center overflow-x-hidden w-full h-full">
       <img src="./src/assets/images/branchesandbird.svg" alt="skyline"
         class="w-full h-full scale-[0.5] beautifulscrollingimage" />
       <h1
-        class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-[20px] text-[#fff] beautifulscrollingtext opacity-0 uppercase tracking-[10px] w-full text-center font-[200]">
+        class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-[20px] text-[#fff] beautifulscrollingtext opacity-0 uppercase tracking-[10px] w-full text-center font-[200] z-[10]">
         "When Creativity Meets Engineering"</h1>
+
+      <!-- element one  -->
+      <div class="absolute w-[300px] h-[300px] border border-gray-300 rounded-full beautifulscrollelementone opacity-0">
+      </div>
+      <!-- element two  -->
+      <div
+        class="absolute w-[500px] h-[5px] beautifulscrollelementtwo bg-gray-300 opacity-1 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 -skew-y-45 z-[9]">
+      </div>
+      <div
+        class="absolute w-[500px] h-[5px] beautifulscrollelementthree bg-gray-300 opacity-1 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 -skew-y-45 z-[9]">
+      </div>
+
+
     </section>
 
     <section
       class="spacer layer next-section h-screen bg-black flex justify-center items-center flex-col projectsection overflow-x-hidden">
-      <h1 class="text-[#fff] text-[150px] text-center projectsheading whitespace-nowrap mt-[100px]"
+      <h1
+        class="text-[#fff] text-[150px] text-center projectsheading whitespace-nowrap mt-[100px] uppercase tracking-widest font-[200]"
         style="font-size: 100px">
         Highlighted Creations...</h1>
       <div class="projectshowcaseleft w-full h-full flex justify-center items-center gap-[30px]">
@@ -349,9 +364,10 @@
       </div>
     </section>
 
-    <!-- ===================================================== SKILLS AND EXPERTIESSECTION: START ===================================================== -->
-    <section class="w-full h-full py-[100px]">
-      <h1 class="text-6xl text-center text-gray-500 mt-[50px]" data-aos="fade-up">Technologies and Frameworks</h1>
+    <!-- ===================================================== SKILLS AND EXPERTIES SECTION: START ===================================================== -->
+    <section class="w-full h-full py-[100px] skillandexpertiessection">
+      <h1 class="text-6xl text-center text-gray-500 mt-[50px] skillsheading" data-aos="fade-up">Technologies and
+        Frameworks</h1>
 
       <div class="w-full h-full p-[50px] mt-[50px]" data-aos="fade-up" data-aos-delay>
         <div class="flex justify-center items-center flex-wrap gap-[10px] [&>div>span]:whitespace-nowrap">
@@ -839,19 +855,10 @@
       </div>
     </footer>
 
-    <script type="module" defer src="/src/gsapanimation.js"></script>
-    <script type="module" defer src="/src/main.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="script.js"></script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({
-        delay: 500,
-        duration: 1000
-      });
       $(document).ready(function () {
         $(".owl-carousel").owlCarousel({
           loop: true, // Infinite loop
@@ -871,6 +878,9 @@
         });
       });
     </script>
+    <script type="module" defer src="/src/main.js"></script>
+    <script type="module" defer src="/src/gsapanimation.js"></script>
+    <script src="script.js"></script>
   </main>
 
 </body>

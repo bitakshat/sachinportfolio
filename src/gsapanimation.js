@@ -1,5 +1,6 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Aos from 'aos';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -60,6 +61,10 @@ const loadingTimeline = gsap.timeline({
                 onComplete: () => {
                     document.querySelector('.loading-screen-container').style.display = 'none';
                     document.body.style.overflow = 'auto';
+                    Aos.init({
+                        duration: 1200,
+                        once: false,
+                    });
                 }
             })
             .to('.hidden-content', {
@@ -173,7 +178,39 @@ function initializeMainAnimations() {
         })
         .to(scrollText, {
             opacity: 1,
-        });
+        })
+        .to('.beautifulscrollelementone', {
+            width: "80%",
+            opacity: 1,
+        })
+        .to('.beautifulscrollelementone', {
+            opacity: 0,
+            duration: 1.5
+        })
+        .to('.beautifulscrollelementtwo', {
+            rotation: 180,
+            duration: 1.5,
+            ease: "power2.inOut",
+            height: "30px"
+            // x: "100vw"
+        }, 2)
+        .to('.beautifulscrollelementthree', {
+            rotation: -180,
+            duration: 1.5,
+            ease: "power2.inOut",
+            height: "30px"
+            // x: "-100vw"
+        }, 2)
+        .to('.beautifulscrollelementtwo', {
+            width: "100%"
+        }, 3)
+        .to('.beautifulscrollelementthree', {
+            width: "100%"
+        }, 3)
+        .to(scrollText, {
+            color: "#000"
+        }, 3)
+
 
 
     // work experience timeline
@@ -209,7 +246,7 @@ function initializeMainAnimations() {
         }
     })
         .to('.projectsheading', {
-            fontSize: "40px",
+            fontSize: "30px",
             duration: 1,
         })
         .from('.projectshowcaseleft', {
@@ -228,6 +265,24 @@ function initializeMainAnimations() {
         .to('.projectsheading', {
             color: "#fff"
         });
+
+
+    // skills and experties timeline  
+    // gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: ".skillandexpertiessection",
+    //         start: "bottom bottom",
+    //         toggleActions: "play none reverse none"
+    //     }
+    // })
+    //     .fromTo('.skillsheading', {
+    //         y: "-100px",
+    //         color: "red",
+    //     }, {
+    //         y: "0px",
+    //         color: "blue"
+    //     }, 0)
+
 
     function scrambleTextByWords(element) {
         // Clone the element to measure dimensions before manipulation
