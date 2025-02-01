@@ -31,7 +31,7 @@
 <body class="scroll-smooth">
 
   <!-- loading screen  -->
-  <section class="relative w-full h-screen bg-[#fff] loading-screen-container overflow-y-hidden">
+  <!-- <section class="relative w-full h-screen bg-[#fff] loading-screen-container overflow-y-hidden">
     <div class="bg-[#000] w-full h-1/2 upper-loading-section"></div>
     <h1
       class="absolute !z-[10] -translate-x-1/2 -translate-y-[calc(50%+20px)] left-1/2 top-1/2 uppercase tracking-[15px] text-center font-thin text-[#fff] loading-text text-[50px]">
@@ -39,7 +39,7 @@
     <div class="absolute !z-[0] -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-0 h-[1px] bg-[#fff] loading-line">
     </div>
     <div class="bg-[#000] w-full h-1/2 lower-loading-section"></div>
-  </section>
+  </section> -->
 
   <main class="hidden-content"
     style="background-image: url('./src/assets/images/spectrum-gradient.svg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
@@ -561,7 +561,7 @@
       </div>
     </section>
 
-    <section class="w-full my-[150px] recommendationsection">
+    <section class="w-full mt-[150px] recommendationsection">
       <div class="w-full flex justify-center items-center">
         <h1 class="relative w-max text-6xl text-center text-gray-500 mt-[50px] recommendataionsectionheading"
           data-aos="fade-up">
@@ -849,11 +849,62 @@
 
     </section>
 
-    <footer>
-      <div class="relative w-full h-[600px] flex justify-center items-center flex-col bg-[#000] text-white">
-        <h1 class="text-[30px] tracking-widest">Let’s Connect Beyond the Code</h1>
+    <footer id="footer">
+      <div
+        class="relative overflow-y-hidden w-full h-[600px] flex justify-center items-center flex-col bg-[#000] text-white">
+        <div class="relative overflow-hidden">
+          <h1 class="text-[30px] tracking-widest z-[3]">Let’s Connect Beyond the Code</h1>
+          <div class="absolute top-0 left-0 w-full h-full bg-black reveal-overlay"></div>
+        </div>
+
+        <!-- CTA button  -->
+        <button
+          class="before:ease relative h-12 w-40 mt-[50px] overflow-hidden border border-gray-400 text-gray-400 shadow-2xl transition-all before:absolute before:top-1/2 before:h-0 before:w-64 before:origin-center before:-translate-x-20 before:rotate-45 before:bg-gray-500 before:duration-300 hover:text-white hover:shadow-blue-500 hover:before:h-64 hover:before:-translate-y-32">
+          <span class="relative z-10">Say Hello</span>
+        </button>
+
+        <!-- social icons  -->
+        <div class="flex gap-[20px] mt-[25px]">
+          <img src="./src/assets/images/linkedinicon.svg" class="w-[25px] h-[25px]" alt="linkedin-icon">
+          <img src="./src/assets/images/instagramicon.svg" class="w-[25px] h-[25px]" alt="instagram-icon">
+          <img src="./src/assets/images/githubicon.svg" class="w-[25px] h-[25px]" alt="github-icon">
+        </div>
+
+        <!-- copyright information  -->
         <div>
 
+        </div>
+
+        <!-- elements  -->
+        <!-- <div
+          class="footer-square-element w-[15%] h-[15vw] z-[1] border border-gray-400 opacity-100 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 rotate-45">
+        </div> -->
+        <div
+          class="footer-square2-element w-[15%] h-[15vw] z-[1] border-2 border-gray-400 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 rotate-45">
+        </div>
+        <div
+          class="footer-circle-element w-[100px] h-[100px] rounded-full scale-[1.5] z-[1] bg-white absolute top-[100px] right-[300px] rotate-45 flex justify-center items-center">
+          <div class="w-[95px] h-[95px] bg-black rounded-full">
+          </div>
+        </div>
+        <div
+          class="footer-circle-element w-[400px] h-[400px] rounded-full scale-[1.5] z-[1] border border-gray-600 absolute top-[150px] left-0 rotate-45">
+        </div>
+
+
+        <div
+          class="landing-image-motion absolute bottom-[calc(20%)] right-0 h-max flex justify-center items-center flex-col">
+          <span class="text-[15px] tracking-[5px] uppercasdsdddddddsdse" style="writing-mode: vertical-lr;">Scroll
+            Up</span>
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAABYUlEQVR4nO3YvytGYRjG8a/flFCS+Y1ktbOTLEoZlNFgMCiTyT+AwaAYZDEQyWp4y4KSgSKUqLcYRInFr05d6mRBFu+5r0+dOs/9dIbrPud0nvOAmZmZmZmZmZmZWXGpAqoJ7BQ4BxoIKg+8AytACQG1Ag9qwgRBdQMvwCvQS1CTegoegS4CKgGW1IR7oJOAylJNeAYGCfokTAFvasQiUEdAPcCNmlAAxoHa7y4qBfZ1UbEea6k8jcCcvhDJ3NFPGnD4D0L85dj+kmkAeNLcJhm1oIBnQHOqPqa1QTI3D1SQQf0KmKwGW1I/SMuqJ3d/iIyqBK4UdFi1JmBHtUuggwwbUdA9jXPAhWq7X16HTDpW2D6gDbjWeBWoIeNyCnun8AWNZ/U1y7xRBc5rQyQ5n460JzCv0J9L3plI4RNbqcXPRrTwiQOFPwHqCWgduAXaCao8+na4mZmZmZmZmZmZ8WsfcgWu+h8Ra8YAAAAASUVORK5CYII="
+            alt="arrow" class="rotate-90 filter">
+        </div>
+
+        <div class="absolute bottom-[30px] flex flex-col justify-center items-center">
+          <span class="text-gray-200 uppercase tracking-wide text-[16px]">© 2025 Sachin Singh</span>
+          <span class="text-[12px] text-gray-500">Designed and Developed by <a
+              class="hover:cursor-pointer">Bitakshat</a></span>
         </div>
       </div>
     </footer>
